@@ -1,0 +1,52 @@
+.TH HSH 1 "December 12, 2022" "1.0" "Simple Shell Manual"
+
+.SH NAME
+hsh \- Simple Shell command line interpreter
+
+.SH SYNOPSIS
+.B ./hsh
+[command] [argument]
+.br
+.B echo
+"[command] [argument]" | ./hsh
+
+.SH DESCRIPTION
+.B Simple Shell
+is a basic command-line interpreter developed in C. It mimics essential functionalities of the original \fBsh\fR shell.
+
+.SH COMPILATION
+To compile the Simple Shell, use the following command:
+.PP
+.B gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+
+.SH USAGE MODES
+Simple Shell can be executed in two modes:
+.TP
+.B Interactive Mode:
+Run the shell by executing the \fBhsh\fR binary. You can then enter commands directly.
+.TP
+.B Non-Interactive Mode:
+Commands can be passed to the shell via a pipe. This is useful for scripting and automation.
+.br
+See examples below for both modes of operation.
+
+.SH EXAMPLES
+.PP
+Interactive mode:
+.IP
+.EX
+$ ./hsh
+hsh$ ls -l
+.EE
+.PP
+Non-interactive mode:
+.IP
+.EX
+$ echo "ls -l" | ./hsh
+.EE
+
+.SH AUTHORS
+Developed by Lucas, Matthis, and Quentin.
+
+.SH COPYRIGHT
+This is free software; see the source for copying conditions. It comes with NO warranty, not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
