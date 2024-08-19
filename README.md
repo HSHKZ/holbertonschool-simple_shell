@@ -54,16 +54,26 @@ This command will compile all .c files in the current directory into an executab
 Here are some examples of how to use the `simple_shell`:
 
 ```sh
-#include "main.h"
+#include "shell.h"
 
-int main(void)
-
+/**
+ * change_directory - Changes the current working directory
+ * @args: Array of arguments where args[1] is the target directory
+ */
+void change_directory(char **args)
 {
-    char *argv[] = {"/bin/ls", "-l", "/tmp", NULL};
-
-    execve(argv[0], argv, NULL);
-
-    return (0);
+	if (args[1] == NULL)
+	{
+		if (chdir(getenv("HOME")) != 0)
+			perror("cd");
+	}
+	else
+	{
+		if (chdir(args[1]) != 0)
+		{
+			perror("cd");
+		}
+	}
 }
 ```
 
