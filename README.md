@@ -13,9 +13,18 @@ The `simple_shell` project supports the following features:
 
 ## Files :
 
-- `main.h`: Header file containing prototypes and include guards.
+- `shell.h`: Header file containing function declarations and necessary includes.
 - `README.md`: Description of the project.
 - `AUTHORS`: List of authors contributing to the Simple Shell project.
+- `cd.c`: File containing the function to use the cd command to change directories.
+- `env.c`: File for print environment.
+- `executor.c`: File that manages the execution of the command.
+- `input.c`: File for manage user reading.
+- `main.c`: File containing the main function and the main code of the program.
+- `parser.c`: File for séparate input in command or argument.
+- `path.c`: File for search command in PATH.
+- `prompt.c`: File that manages the display of the prompt.
+- `man_1_simple_shell`: Man file for the project.
 
 ## Compilation/Installation :
 
