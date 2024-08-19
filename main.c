@@ -19,7 +19,8 @@ int main(void)
 			break;
 		}
 
-		command[strcspn(command, "\n")] = 0;
+		if (command[strlen(command) - 1] == '\n')
+			command[strlen(command) - 1] = '\0';
 
 		if (strcmp(command, "exit") == 0)
 		{
