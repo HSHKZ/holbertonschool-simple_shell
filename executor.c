@@ -79,6 +79,11 @@ void execute_command(char **args)
 	int status;
 	char *full_path = NULL;
 
+	if (args == NULL || args[0] == NULL)
+	{
+		fprintf(stderr, "No command provided\n");
+		return;
+	}
 	if (execute_builtin(args))
 		return;
 	handle_redirection(args);

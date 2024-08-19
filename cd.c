@@ -6,16 +6,23 @@
  */
 void change_directory(char **args)
 {
+	const char *home_dir;
+
 	if (args[1] == NULL)
 	{
-		if (chdir(getenv("HOME")) != 0)
+		home_dir = getenv("HOME");
+		if (home_dir == NULL)
+		{
+			fprintf(stderr, "cd: HOME not set\n");
+			return;
+		}
+
+		if (chdir(home_dir) != 0)
 			perror("cd");
 	}
 	else
 	{
 		if (chdir(args[1]) != 0)
-		{
 			perror("cd");
-		}
 	}
 }
