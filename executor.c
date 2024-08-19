@@ -49,6 +49,9 @@ void handle_redirection(char **args)
  */
 int execute_builtin(char **args)
 {
+	if (args == NULL || args[0] == NULL)
+		return (0);
+
 	if (strcmp(args[0], "env") == 0)
 	{
 		print_env();
@@ -79,11 +82,6 @@ void execute_command(char **args)
 	int status;
 	char *full_path = NULL;
 
-	if (args == NULL || args[0] == NULL)
-	{
-		fprintf(stderr, "No command provided\n");
-		return;
-	}
 	if (execute_builtin(args))
 		return;
 	handle_redirection(args);
