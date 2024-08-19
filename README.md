@@ -48,8 +48,6 @@ This command will compile all .c files in the current directory into an executab
 - Ubuntu 20.04 LTS or a similar Unix-like operating system.
 - Allowed editors : vi, vim, emacs -> we use vim here
 - To have the Betty style
-- A README.md
-- No more than 5 functions per file
 
 ## Examples :
 
