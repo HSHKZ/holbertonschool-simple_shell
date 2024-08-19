@@ -5,5 +5,6 @@
  */
 void prompt(void)
 {
-	printf("$ ");
+	if (isatty(STDIN_FILENO))
+		printf("$ ");
 }
