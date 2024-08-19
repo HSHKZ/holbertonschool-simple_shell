@@ -81,7 +81,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 3. Run the `simple_shell` with the following command in your terminal:
 
 ```sh
-./simple_shell
+./hsh
 ```
 
 ## Using Built-ins :
