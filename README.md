@@ -121,7 +121,7 @@ To access the manual page for `simple_shell`:
 1. Copy the manual page to the appropriate directory:
 
 ```sh
-sudo cp man_1_simple_shell /usr/share/man/man1/
+sudo cp man_1_simple_shell /usr/share/man/man3/
 ```
 
 2. Activate the manual page with:
@@ -130,10 +130,16 @@ sudo cp man_1_simple_shell /usr/share/man/man1/
 mandb
 ```
 
-3. Open the manual page using:
+3. Restart your shell:
 
 ```sh
-man_1_simple_shell
+source ~/.bashrc
+```
+
+4. Open the manual page using:
+
+```sh
+man man_1_simple_shell
 ```
 
 ## AUTHORS :
