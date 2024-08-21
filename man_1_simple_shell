@@ -1,4 +1,4 @@
-.TH HSH 1 "December 12, 2022" "1.0" "Simple Shell Manual"
+.TH HSH 1 "Simple Shell Manual"
 
 .SH NAME
 hsh \- Simple Shell command line interpreter
