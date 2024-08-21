@@ -10,6 +10,8 @@ int main(void)
 	char *command;
 	char **args;
 
+	signal(SIGINT, SIG_IGN);
+
 	while (1)
 	{
 		prompt();

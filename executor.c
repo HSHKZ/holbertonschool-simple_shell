@@ -90,7 +90,7 @@ void execute_command(char **args)
 		full_path = find_command_in_path(args[0]);
 		if (full_path == NULL)
 		{
-			fprintf(stderr, "%s: command not found\n", args[0]);
+			fprintf(stderr, "%s: command not foundin PATH\n", args[0]);
 			return;
 		}
 	} else
@@ -98,7 +98,7 @@ void execute_command(char **args)
 	pid = fork();
 	if (pid == 0)
 	{
-		if (execve(full_path, args, environ) == -1)
+		if (full_path == NULL || execve(full_path, args, environ) == -1)
 		{
 			perror("execve");
 			exit(EXIT_FAILURE);
