@@ -6,6 +6,7 @@
  */
 int main(void)
 {
+	int i;
 	char *command;
 	char **args;
 
@@ -32,6 +33,9 @@ int main(void)
 
 		if (args[0] != NULL)
 			execute_command(args);
+
+		for (i = 0; args[i] != NULL; i++)
+			free(args[i]);
 
 		free(command);
 		free(args);
