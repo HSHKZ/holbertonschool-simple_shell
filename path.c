@@ -15,6 +15,12 @@ char *find_command_in_path(char *command)
 	if (!path)
 		return (NULL);
 
+	if (path == NULL)
+	{
+		perror("PATH");
+		return (NULL);
+	}
+
 	path_copy = strdup(path);
 	if (!path_copy)
 	{
