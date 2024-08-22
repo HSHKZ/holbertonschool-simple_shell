@@ -106,7 +106,7 @@ void execute_command(char **args)
 		if (full_path == NULL || execve(full_path, args, environ) == -1)
 		{
 			perror("execve");
-			exit(EXIT_FAILURE);
+			exit(127);
 		}
 	}
 	else if (pid > 0)
