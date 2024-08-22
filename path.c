@@ -11,7 +11,7 @@ char *find_command_in_path(char *command)
 	char full_path[BUFFER_SIZE];
 	struct stat st;
 
-	path = getenv("PATH");
+	path = _getenv("PATH", environ);
 	if (!path)
 		return (NULL);
 

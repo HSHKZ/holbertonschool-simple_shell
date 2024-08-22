@@ -18,6 +18,7 @@ void execute_command(char **args);
 char *find_command_in_path(char *command);
 void print_env(void);
 void change_directory(char **args);
+char *_getenv(const char *name, char **environ);
 
 extern char **environ;
 
